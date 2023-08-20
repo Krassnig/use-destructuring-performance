@@ -44,15 +44,16 @@ jobs:
         run: |
           yarn install
           yarn run build
+          cd dist
+          ls -la
+          cd assets
+          ls -la
+          cd ../../
           find ./ -type f -delete
           rm -r -d ./node_modules
           rm -r -d ./src
           mv ./dist/* ./
           rm -r -d ./dist
-          ls -la
-          cd assets
-          ls -la
-          cd ../
           
       - name: Setup Pages
         uses: actions/configure-pages@v3
