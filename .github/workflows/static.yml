@@ -41,7 +41,7 @@ jobs:
           find ./ -type f -delete
           rm -r -d ./node_modules
           rm -r -d ./src
-          mv ./dist/* ./site/
+          mv ./dist/* ./_site/
           rm -r -d ./dist
       - name: Setup Pages
         uses: actions/configure-pages@v2
