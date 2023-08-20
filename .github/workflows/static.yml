@@ -43,6 +43,7 @@ jobs:
           rm -r -d ./src
           mv ./dist/* ./_sites/
           rm -r -d ./dist
+          mkdir ./_site/
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
