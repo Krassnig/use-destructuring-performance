@@ -39,9 +39,11 @@ jobs:
         run: |
           yarn install
           yarn run build
-          find . ! -name 'dist' -type f -exec rm -f {} +
+          find ./ -type f -delete
+          rm -r ./node_modules
+          rm - ./src
           mv ./dist/* ./
-          rm -r ./dist/
+          rm -r ./dist
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
