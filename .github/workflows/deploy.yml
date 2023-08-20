@@ -49,6 +49,7 @@ jobs:
           rm -r -d ./src
           mv ./dist/* ./
           rm -r -d ./dist
+          ls -l -a
           
       - name: Setup Pages
         uses: actions/configure-pages@v3
