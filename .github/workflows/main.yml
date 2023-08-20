@@ -40,10 +40,10 @@ jobs:
           yarn install
           yarn run build
           find ./ -type f -delete
-          rm -r ./node_modules
-          rm - ./src
+          rm -r -d ./node_modules
+          rm -r -d ./src
           mv ./dist/* ./
-          rm -r ./dist
+          rm -r -d ./dist
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
