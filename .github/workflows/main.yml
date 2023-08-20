@@ -39,7 +39,7 @@ jobs:
         run: |
           yarn install
           yarn run build
-          rm -v -r !("dist")
+          find . ! -name 'dist' -type f -exec rm -f {} +
           mv ./dist/* ./
           rm ./dist/
       - name: Setup Pages
