@@ -1,0 +1,8 @@
+.phoneNumbers {
+	padding: 10px 20px;
+}
+
+.phoneNumber {
+	display: flex;
+	flex-direction: row;
+}
